@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Dolar App</string>
+    <string name="historic_values">Valór histórico</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="all_dollar_fragment_label">All dollar</string>
+    <string name="dollar_data_history_fragment_label">Dollar Historic Data</string>
+    <string name="previous">Previous</string>
+</resources>
