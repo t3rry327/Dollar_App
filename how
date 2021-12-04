@@ -1,0 +1,11 @@
+Puntos que tuve muy en cuenta:
+
+1- Como guardar los valores?
+  Cree una SQLite que guardaba los datos recibidos desde el endpoint - Estos se guardan cada vez que se hace una request al mismo 
+  Una de las mejoras posibles es crear un filtro para que no se vuelvan a guardar los valores del mismo dia
+  La estructura de la base de datos es: id,nombre de la moneda, precio de compra, precio de venta, y la fecha
+
+2- Como guardar valores diarios sin abrir la app?
+  Utilizé un JobScheduler https://developer.android.com/reference/android/app/job/JobScheduler Para correr un servicio que consulta el endpoint una vez por día, solo cuando hay disponibilidad de red (Util.internetConnection).
+  Este job ademas de consultar el endpoint tambien guarda los datos en la SQLite, para que luego puedan ser consultados en caso de que el usuario no disponga de conexion a internet, o no haya utilizado la app pero aun asi necesite saber los valores historicos.
+  
